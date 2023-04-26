@@ -140,17 +140,17 @@ local function info()
     mon.setCursorPos(1,6) mon.setTextColor(4096) mon.write("Waste: ") mon.setTextColor(1) mon.write(waste .. "%")
 
 
-    mon.setCursorPos(1,14) mon.setTextColor(16) mon.write("Industrial Turbine")
-    mon.setCursorPos(1,15) mon.setTextColor(8192) mon.write("Production: ") mon.setTextColor(1) mon.write(prodDisp)
-    mon.setCursorPos(1,16) mon.setTextColor(256) mon.write("Steam: ") mon.setTextColor(1) mon.write(steam .. "%")
+    mon.setCursorPos(1,9) mon.setTextColor(16) mon.write("Industrial Turbine")
+    mon.setCursorPos(1,10) mon.setTextColor(8192) mon.write("Production: ") mon.setTextColor(1) mon.write(prodDisp)
+    mon.setCursorPos(1,11) mon.setTextColor(256) mon.write("Steam: ") mon.setTextColor(1) mon.write(steam .. "%")
 
-    mon.setCursorPos(1,18) mon.setTextColor(16) mon.write("Induction Matrix")
-    mon.setCursorPos(1,19) mon.setTextColor(8192) mon.write("Input: ") mon.setTextColor(1) mon.write(inputDisp)
-    mon.setCursorPos(1,20) mon.setTextColor(8192) mon.write("Output: ") mon.setTextColor(1) mon.write(outputDisp)
-    mon.setCursorPos(1,21) mon.setTextColor(8192) mon.write("Energy: ") mon.setTextColor(1) mon.write(energyDisp)
-    mon.setCursorPos(1,22) mon.setTextColor(8192) mon.write("Filled: ") mon.setTextColor(1) mon.write(epercent .. "%")
+    mon.setCursorPos(1,13) mon.setTextColor(16) mon.write("Induction Matrix")
+    mon.setCursorPos(1,14) mon.setTextColor(8192) mon.write("Input: ") mon.setTextColor(1) mon.write(inputDisp)
+    mon.setCursorPos(1,15) mon.setTextColor(8192) mon.write("Output: ") mon.setTextColor(1) mon.write(outputDisp)
+    mon.setCursorPos(1,16) mon.setTextColor(8192) mon.write("Energy: ") mon.setTextColor(1) mon.write(energyDisp)
+    mon.setCursorPos(1,17) mon.setTextColor(8192) mon.write("Filled: ") mon.setTextColor(1) mon.write(epercent .. "%")
 
-    mon.setCursorPos(1,24) mon.setTextColor(16384) mon.write("SCRAM COUNT: ") mon.write(string.format("%3.0f", scramCount))
+    mon.setCursorPos(1,20) mon.setTextColor(16384) mon.write("SCRAM COUNT: ") mon.write(string.format("%3.0f", scramCount))
 end
 
 while true do
