@@ -1,5 +1,4 @@
 local rla = peripheral.find("fissionReactorLogicAdapter")
-local boi = peripheral.find("boilerValve")
 local trb = peripheral.find("turbineValve")
 local ind = peripheral.find("inductionPort")
 local mon = peripheral.find("monitor")
@@ -42,10 +41,6 @@ local function info()
     local heated = math.ceil(rla.getHeatedCoolantFilledPercentage() * 100)
     local waste = math.ceil(rla.getWasteFilledPercentage() * 100)
     local steam = math.ceil(trb.getSteamFilledPercentage() * 100)
-    local bheated = math.ceil(boi.getHeatedCoolantFilledPercentage() * 100)
-    local bcoolant = math.ceil(boi.getCooledCoolantFilledPercentage() * 100)
-    local bwater = math.ceil(boi.getWaterFilledPercentage() * 100)
-    local bsteam = math.ceil(boi.getSteamFilledPercentage() * 100)
 
     local status = ""
 
@@ -144,11 +139,6 @@ local function info()
     mon.setCursorPos(1,5) mon.setTextColor(4) mon.write("Heated: ") mon.setTextColor(1) mon.write(heated .. "%")
     mon.setCursorPos(1,6) mon.setTextColor(4096) mon.write("Waste: ") mon.setTextColor(1) mon.write(waste .. "%")
 
-    mon.setCursorPos(1,8) mon.setTextColor(16) mon.write("Thermoelectric Boiler")
-    mon.setCursorPos(1,9) mon.setTextColor(4) mon.write("Heated: ") mon.setTextColor(1) mon.write(bheated .. "%")
-    mon.setCursorPos(1,10) mon.setTextColor(2048) mon.write("Cooled: ") mon.setTextColor(1) mon.write(bcoolant .. "%")
-    mon.setCursorPos(1,11) mon.setTextColor(8) mon.write("Water: ") mon.setTextColor(1) mon.write(bwater .. "%")
-    mon.setCursorPos(1,12) mon.setTextColor(256) mon.write("Steam: ") mon.setTextColor(1) mon.write(bsteam .. "%")
 
     mon.setCursorPos(1,14) mon.setTextColor(16) mon.write("Industrial Turbine")
     mon.setCursorPos(1,15) mon.setTextColor(8192) mon.write("Production: ") mon.setTextColor(1) mon.write(prodDisp)
