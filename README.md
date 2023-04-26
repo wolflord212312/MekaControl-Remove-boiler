@@ -15,7 +15,7 @@ Should work 99% of the time... probably.
 
 # Installation
 
-Run the following command: `pastebin get quSs9vXd startup.lua`
+Run the following command: `pastebin get 5LJHdz2c startup.lua`
 
 It will download the mekacontrol script and start function loops that monitor various aspects of the reactor, boiler, turbine, and induction matrix, and immediately scram the reactor if anything happens that could cause a meltdown.
 
